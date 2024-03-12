@@ -37,15 +37,15 @@ Idx Name          Size      VMA       LMA       File off  Algn
                   CONTENTS, READONLY, DEBUGGING, OCTETS
  16 .debug_rnglists 00000773  00000000  00000000  0002b1d8  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 17 .debug_macro  000174ac  00000000  00000000  0002b94b  2**0
+ 17 .debug_macro  000174ba  00000000  00000000  0002b94b  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 18 .debug_line   0000b7fc  00000000  00000000  00042df7  2**0
+ 18 .debug_line   0000b7fc  00000000  00000000  00042e05  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 19 .debug_str    0008cb98  00000000  00000000  0004e5f3  2**0
+ 19 .debug_str    0008cba0  00000000  00000000  0004e601  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 20 .debug_frame  00003924  00000000  00000000  000db18c  2**2
+ 20 .debug_frame  00003924  00000000  00000000  000db1a4  2**2
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 21 .debug_line_str 00000069  00000000  00000000  000deab0  2**0
+ 21 .debug_line_str 00000061  00000000  00000000  000deac8  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
 
 Disassembly of section .text:
@@ -1267,12 +1267,12 @@ void DHT22_Delay(int us)
  8000f56:	b083      	sub	sp, #12
  8000f58:	af00      	add	r7, sp, #0
  8000f5a:	6078      	str	r0, [r7, #4]
-	__HAL_TIM_SET_COUNTER(&htim11, 0);
+	__HAL_TIM_SET_COUNTER(&DHT22_1US_TIMER, 0);
  8000f5c:	4b08      	ldr	r3, [pc, #32]	; (8000f80 <DHT22_Delay+0x2c>)
  8000f5e:	681b      	ldr	r3, [r3, #0]
  8000f60:	2200      	movs	r2, #0
  8000f62:	625a      	str	r2, [r3, #36]	; 0x24
-	while ((__HAL_TIM_GET_COUNTER(&htim11))<us);
+	while ((__HAL_TIM_GET_COUNTER(&DHT22_1US_TIMER))<us);
  8000f64:	bf00      	nop
  8000f66:	4b06      	ldr	r3, [pc, #24]	; (8000f80 <DHT22_Delay+0x2c>)
  8000f68:	681b      	ldr	r3, [r3, #0]
@@ -1428,7 +1428,7 @@ DHT22_Error_t DHT22_WaitForPin(DHT22_t *sensor, uint8_t PinState)
  800104e:	6078      	str	r0, [r7, #4]
  8001050:	460b      	mov	r3, r1
  8001052:	70fb      	strb	r3, [r7, #3]
-	__HAL_TIM_SET_COUNTER(&htim11, 0);
+	__HAL_TIM_SET_COUNTER(&DHT22_1US_TIMER, 0);
  8001054:	4b0d      	ldr	r3, [pc, #52]	; (800108c <DHT22_WaitForPin+0x44>)
  8001056:	681b      	ldr	r3, [r3, #0]
  8001058:	2200      	movs	r2, #0
@@ -1436,7 +1436,7 @@ DHT22_Error_t DHT22_WaitForPin(DHT22_t *sensor, uint8_t PinState)
 	while (!(DHT22_ReadPin(sensor) == PinState))
  800105c:	e008      	b.n	8001070 <DHT22_WaitForPin+0x28>
 	{
-		if(__HAL_TIM_GET_COUNTER(&htim11) >= (DHT22_TIMEOUT_MS * 1000))
+		if(__HAL_TIM_GET_COUNTER(&DHT22_1US_TIMER) >= (DHT22_TIMEOUT_MS * 1000))
  800105e:	4b0b      	ldr	r3, [pc, #44]	; (800108c <DHT22_WaitForPin+0x44>)
  8001060:	681b      	ldr	r3, [r3, #0]
  8001062:	6a5b      	ldr	r3, [r3, #36]	; 0x24

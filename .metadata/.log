@@ -1,0 +1,18 @@
+!SESSION 2024-03-12 14:20:14.730 -----------------------------------------------
+eclipse.buildId=Version 1.14.1
+java.version=17.0.8.1
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=pl_PL
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -data C:\Users\zalfon\Desktop\Michal\DHT22
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 4 4 2024-03-12 14:20:19.274
+!MESSAGE CubeMX plugin appears to be active, Log4j initialization might be too late.
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 1 1 2024-03-12 14:20:19.274
+!MESSAGE Log4j2 initialized with config file C:\Users\zalfon\Desktop\Michal\DHT22\.metadata\.log4j2.xml
+
+!ENTRY com.st.stm32cube.ide.mcu.ide 1 1 2024-03-12 14:20:21.698
+!MESSAGE Started RMI Server, listening on port 41337
+
+!ENTRY org.eclipse.cdt.core 1 0 2024-03-12 14:20:38.157
+!MESSAGE Indexed 'DHT22_Example' (26 sources, 158 headers) in 4.03 sec: 14,090 declarations; 59,524 references; 5 unresolved inclusions; 121 syntax errors; 1,179 unresolved names (1.6%)

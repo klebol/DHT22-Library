@@ -11,6 +11,7 @@
 #include "gpio.h"
 
 #define DHT22_TIMEOUT_MS 65
+#define DHT22_1US_TIMER htim11
 
 typedef struct
 {

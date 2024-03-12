@@ -18,8 +18,8 @@
 /* Custom 1 us delay */
 void DHT22_Delay(int us)
 {
-	__HAL_TIM_SET_COUNTER(&htim11, 0);
-	while ((__HAL_TIM_GET_COUNTER(&htim11))<us);
+	__HAL_TIM_SET_COUNTER(&DHT22_1US_TIMER, 0);
+	while ((__HAL_TIM_GET_COUNTER(&DHT22_1US_TIMER))<us);
 }
 
 /* GPIO pin's direction change */
@@ -55,10 +55,10 @@ uint8_t DHT22_ReadPin(DHT22_t *sensor)
 /* Timeouted wait for pin state change */
 DHT22_Error_t DHT22_WaitForPin(DHT22_t *sensor, uint8_t PinState)
 {
-	__HAL_TIM_SET_COUNTER(&htim11, 0);
+	__HAL_TIM_SET_COUNTER(&DHT22_1US_TIMER, 0);
 	while (!(DHT22_ReadPin(sensor) == PinState))
 	{
-		if(__HAL_TIM_GET_COUNTER(&htim11) >= (DHT22_TIMEOUT_MS * 1000))
+		if(__HAL_TIM_GET_COUNTER(&DHT22_1US_TIMER) >= (DHT22_TIMEOUT_MS * 1000))
 		{
 			/* Timeout ! */
 			return DHT22_TIMEOUT;
