@@ -1,0 +1,14 @@
+../Core/Src/hd44780.c:21:13:LCD_Delay	24	static,ignoring_inline_asm
+../Core/Src/hd44780.c:30:13:LCD_SendHalf	16	static
+../Core/Src/hd44780.c:46:13:LCD_WriteByte	16	static
+../Core/Src/hd44780.c:54:13:LCD_WriteCmd	16	static
+../Core/Src/hd44780.c:60:13:LCD_WriteData	16	static
+../Core/Src/hd44780.c:67:13:LCD_GPIO_Init	32	static
+../Core/Src/hd44780.c:116:6:LCD_Init	8	static
+../Core/Src/hd44780.c:151:6:LCD_Clear	8	static
+../Core/Src/hd44780.c:157:6:LCD_Locate	16	static
+../Core/Src/hd44780.c:178:6:LCD_Home	8	static
+../Core/Src/hd44780.c:184:6:LCD_WriteChar	16	static
+../Core/Src/hd44780.c:190:6:LCD_WriteStr	16	static
+../Core/Src/hd44780.c:200:6:LCD_WriteInt	40	static
+../Core/Src/hd44780.c:208:6:LCD_WriteHex	32	static

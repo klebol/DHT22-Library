@@ -1,0 +1,14 @@
+../Core/Src/dht22.c:19:6:DHT22_Delay	2
+../Core/Src/dht22.c:26:6:DHT22_SetPinAsOutput	1
+../Core/Src/dht22.c:35:6:DHT22_SetPinAsInput	1
+../Core/Src/dht22.c:45:6:DHT22_SetPin	1
+../Core/Src/dht22.c:50:9:DHT22_ReadPin	1
+../Core/Src/dht22.c:56:15:DHT22_WaitForPin	3
+../Core/Src/dht22.c:73:6:DHT22_Init	1
+../Core/Src/dht22.c:84:15:DHT22_SendStartSignal	4
+../Core/Src/dht22.c:121:15:DHT22_ReadByte	6
+../Core/Src/dht22.c:169:15:DHT22_ChecksumVerify	2
+../Core/Src/dht22.c:187:15:DHT22_ReadData	9
+../Core/Src/dht22.c:226:7:DHT22_GetTemperature	1
+../Core/Src/dht22.c:231:7:DHT22_GetHumidity	1
+../Core/Src/dht22.c:236:9:DHT22_GetPresence	1
